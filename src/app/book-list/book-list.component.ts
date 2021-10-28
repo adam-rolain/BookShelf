@@ -26,4 +26,9 @@ export class BookListComponent implements OnInit {
     this.books.push(this.newBook);
   }
 
+  deleteBook(book: Book) {
+    let i = this.books.indexOf(book);
+    this.books.splice(i, 1);
+  }
+
 }

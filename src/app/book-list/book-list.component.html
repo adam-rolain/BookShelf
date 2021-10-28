@@ -8,6 +8,4 @@
     <button type="submit" (click)="addBook()">Save Book</button>
   </form>
 
-  <ng-container *ngFor="let book of books">
-    <app-book></app-book>
-  </ng-container>
+<app-book *ngFor="let book of books" [book]="book" (deleted)="deleteBook($event)"></app-book>
