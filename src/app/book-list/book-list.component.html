@@ -1,0 +1,13 @@
+<form>
+    <label for="title">Title: </label>
+    <input name="title" [(ngModel)]="newBook.title" />
+    <label for="author">Author: </label>
+    <input name="author" [(ngModel)]="newBook.author" />
+    <label for="publicationYear">Publication Year: </label>
+    <input name="publicationYear" [(ngModel)]="newBook.publicationYear" />
+    <button type="submit" (click)="addBook()">Save Book</button>
+  </form>
+
+  <ng-container *ngFor="let book of books">
+    <app-book></app-book>
+  </ng-container>
